@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VMS Log In or Sign Up</title>
+    <meta charset="utf-8">
+    <meta charset="ISO-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="./photos/b.jpg">    
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/code_examples/passtest.js"></script>
+  
+  <script type="text/javascript">
+    function val(){
+      if (frm.name.value=="")
+       {
+        alert("Enter the Name");
+        frm.name.focus();
+        return false;
+      }
+      if (frm.email.value=="")
+       {
+        alert("Enter the Email");
+        frm.email.focus();
+        return false;
+      }
+       var x = document.forms["frm"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        frm.email.focus();
+        return false;
+    }
+      if (frm.username.value=="")
+       {
+        alert("Enter the Username");
+        frm.username.focus();
+        return false;
+      }
+      if (frm.password.value=="")
+       {
+        alert("Enter the password");
+        frm.password.focus();
+        return false;
+      }
+      if ((frm.password.value).length < 6) 
+      {
+        alert("Password should be minimum 6 characters");
+        frm.password.focus();
+        return false;
+      }
+      if(frm.confirm.value=="")
+      {
+        alert("Enter the Cofirmation Password");
+        frm.confirm.focus();
+        return false;
+      }
+      if (frm.confirm.value != frm.password.value) {
+        alert("Password does not match");
+        return false;
+      }
+      return true;
+    }
+  </script>
+   <style type="text/css">
+    .head{
+      background-color: #ffffff;
+    }
+    .di{
+      background-color: #0099e6;
+      border: 0;
+     
+      margin-bottom: 0;
+    }
+    .a{
+       color: white;
+       font-size: 20px;
+    }
+    .aa:hover{
+      background-color:  #4dc3ff;
+    }
+     @media only screen and (min-width: 100px) {
+   .img-responsive{
+      width: 100%;
+      height: 600px;
+    }
+}
+    .img-responsive{
+      width: 100%;
+      
+      max-height: 600px;
+    }
+    .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+  .rightt{
+    float: right;
+    color: white;
+    
+
+  }
+ 
+.form-group{
+  margin-bottom: 15px;
+}
+
+label{
+  margin-bottom: 15px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 11px;
+    padding-top: 3px;
+}
+
+.main-login{
+  background-color: #fff;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.main-center{
+  margin-top: 30px;
+  margin: 0 auto;
+  max-width: 330px;
+    padding: 40px 40px;
+
+}
+
+.login-button{
+  margin-top: 5px;
+}
+
+.login-register{
+  font-size: 11px;
+  text-align: center;
+}
+.ac{
+  	background-color:#4dc3ff;
+  	}
+.body{
+ background: url('./photos/back.jpg');
+ 
+}
+  </style>
+</head>
+<body style="border:0" class="body">
+  <header class="container-fluid head">
+  <div class="container" style="margin-top:7px"> 
+      <a href="http://www.sstsusa.com/">
+        <img  class="img-rounded"src="http://learnbeyond.com/wordpress/wp-content/uploads/2014/04/logo52.png" width="216" height="55" border="0">
+      </a>
+  <ul class="list-inline navbar-nav navbar-right" >
+      <li class=""><a href="mailto:info@sstsusa.com"  style="text-decoration:none"><span class="glyphicon glyphicon-envelope" style="color: #0099e6" ></span> <span style="color: #0099e6">info@sstsusa.com</span></a></li>
+      <li class=""><span class="glyphicon glyphicon-phone" style="color: #0099e6" ></span><span style="color: #0099e6"> 816-282-8923</span></li>
+      <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" style="color: #0099e6"></i></a></li>
+                <li><a href="https://twitter.com/"><i class="fa fa-twitter" style="color: #0099e6"></i></a></li>
+    </ul></div>
+  </header>
+      
+      <nav class="navbar navbar-inverse di">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://www.sstsusa.com/"><span class="a">SSTS USA</span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="aa"><a href="D:\xampp\htdocs\VMS\login.html"><span class="a">Home</span></a></li>
+        <li class="aa"><a href="http://www.sstsusa.com/about.html"><span class="a">About Us</span></a></li>
+        <li class="aa"><a href="http://www.sstsusa.com/contact.html"><span class="a">Contact</span></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="aa"><a href="admin.html"><span class="glyphicon glyphicon-user"></span> <span class="a">Admin</span></a></li>
+        <li class="ac"><a href="#"><span class="glyphicon glyphicon-log-in"></span> <span class="a">Recruiter</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    
+    <main>
+    
+     <div class="container" style="position:relative;top:10px">
+      <div class="row main">
+        <div class="main-login main-center">
+          <form name="frm" class="form-horizontal" method="post" action="SignUp">
+            
+            <div class="form-group">
+              <label for="name" class="cols-sm-2 control-label">Your Name</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="cols-sm-2 control-label">Your Email</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="username" class="cols-sm-2 control-label">Username</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="password" class="cols-sm-2 control-label">Password</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                  <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                  <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group ">
+              <button name="register" type="submit" class="btn btn-primary btn-lg btn-block login-button" onclick="return val();">Register</button>
+            </div>
+            <div class="login-register">
+                    <a href="recruiter.html">Login</a>
+                 </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    </main>
+   
+</body>
+</html>
